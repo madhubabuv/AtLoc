@@ -24,9 +24,9 @@ class SevenScenes(data.Dataset):
 
         # decide which sequences to use
         if train:
-            split_file = osp.join(data_dir, 'train_split.txt')
+            split_file = osp.join(data_dir, 'Trainsplit.txt')
         else:
-            split_file = osp.join(data_dir, 'test_split.txt')
+            split_file = osp.join(data_dir, 'TestSplit.txt')
         with open(split_file, 'r') as f:
             seqs = [int(l.split('sequence')[-1]) for l in f if not l.startswith('#')]
 
