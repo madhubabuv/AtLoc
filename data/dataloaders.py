@@ -24,7 +24,7 @@ class SevenScenes(data.Dataset):
 
         # decide which sequences to use
         if train:
-            split_file = osp.join(data_dir, 'Trainsplit.txt')
+            split_file = osp.join(data_dir, 'TrainSplit.txt')
         else:
             split_file = osp.join(data_dir, 'TestSplit.txt')
         with open(split_file, 'r') as f:
