@@ -1,3 +1,5 @@
 .idea/*
 *.pyc
 .DS_Store
+data/robotcar_sdk
+data/robotcar_camera_models

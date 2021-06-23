@@ -1,0 +1,3 @@
+[submodule "robotcar-dataset-sdk"]
+	path = data/robotcar-dataset-sdk
+	url = https://github.com/samarth-robo/robotcar-dataset-sdk
