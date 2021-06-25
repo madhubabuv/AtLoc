@@ -21,7 +21,7 @@ class Options():
         self.parser.add_argument('--seed', type=int, default=7)
         self.parser.add_argument('--lstm', type=bool, default=False)
         self.parser.add_argument('--logdir', type=str, default='./logs')
-        self.parser.add_argument('--exp_name', type=str, default='name')
+        self.parser.add_argument('--exp_name', type=str,required=True, default='name')
         self.parser.add_argument('--skip', type=int, default=10)
         self.parser.add_argument('--variable_skip', type=bool, default=False)
         self.parser.add_argument('--real', type=bool, default=False)
@@ -68,7 +68,7 @@ class Options():
         print('-------------- End ---------------')
 
         # save to the disk
-        self.opt.exp_name = '{:s}_{:s}_{:s}_{:s}'.format(self.opt.dataset, self.opt.scene, self.opt.model, str(self.opt.lstm))
+        #self.opt.exp_name = '{:s}_{:s}_{:s}_{:s}'.format(self.opt.dataset, self.opt.scene, self.opt.model, str(self.opt.lstm))
         expr_dir = os.path.join(self.opt.logdir, self.opt.exp_name)
         self.opt.results_dir = os.path.join(expr_dir, self.opt.results_dir)
         self.opt.models_dir = os.path.join(expr_dir, self.opt.models_dir)
